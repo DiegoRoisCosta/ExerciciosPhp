@@ -1,0 +1,416 @@
+
+<!-- FrontEnd Slata 2019 -->
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+   <!-- Metas para caracteres universais e SEO -->
+   <meta charset="UTF-8">
+   <meta name="description" content="Slaca 2019 | Simpósio">
+   <meta name="keywords" content="Slaca, 2019, Simpósio">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Slaca 2019 | Simpósio</title>
+
+   <!-- Google Font -->
+   <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900&display=swap" rel="stylesheet">
+
+   <!-- Estilos Css -->
+   <link rel="shortcut icon" href="Assets/img/icon/favicon.ico" type="image/x-icon"/>
+   <link rel="stylesheet" href="Assets/css/style.css" type="text/css"/>
+   <link rel="stylesheet" href="Assets/framework/bootstrap.css" type="text/css"/>
+   <link rel="stylesheet" href="Assets/css/jquerysctipttop.css" type="text/css">
+   <link rel="stylesheet" href="Assets/css/counter.css" type="text/css">
+</head>
+
+<body>
+
+   <!-- Preloader da pagina para oferecer uma experiencia melhor ao usuario -->
+   <div id="preloder">
+      <div class="loader"></div>
+   </div>
+
+   <!-- Header Section Begin -->
+   <header class="header-section">
+      <div class="container-fluid">
+         <div class="row bg-overlay">
+            <div class="header">
+               <div class="col-lg-12">
+                  <div class="logo">
+                     <a href="#"><img src="Assets/img/logo/logo-slaca.png" alt=""></a>
+                  </div>
+
+                  <!-- Barra de navegação -->
+                  <div class="navigation mobile-menu">
+                     <div class="main-menu">
+                        <nav>
+                           <ul>
+                              <li><a class="active" href="#">Home</a></li>
+                              <li><a href="Assets/html/autores.html">Autores</a></li>
+                              <li><a href="Assets/html/comite.html">Comitê</a></li>
+                              <li><a href="Assets/html/trabalhos.html">Trabalhos</a></li>
+                              <li><a href="Assets/html/contato.html">Contato</a></li>
+                              <li><a href="Assets/html/fotos.html">Fotos</a></li>
+                           </ul>
+                        </nav>
+                     </div>
+                     <div class="top-social">
+                        <a href="https://www.facebook.com/12SLACA/"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#" class="search-btn search-trigger"><i class="fa fa-search"></i></a>
+                     </div>
+                  </div>
+                  <!-- Barra de navegação -->
+
+                  <div id="mobile-menu-wrap"></div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </header>
+   <!-- Header End -->
+
+   <!-- Search Bar Begin -->
+   <section class="search-bar-wrap">
+      <span class="search-close"><i class="fa fa-close"></i></span>
+      <div class="search-bar-table">
+         <div class="search-bar-tablecell">
+            <div class="search-bar-inner">
+               <h2>Pesquisar</h2>
+               <form action="#">
+                  <input type="search" placeholder="Digite palavras-chave">
+                  <button type="submit">Procurar</button>
+               </form>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- Search Bar End -->
+
+   <!-- Slider Area Begin -->
+   <div class="hero-section">
+      <div class="hero-items owl-carousel">
+
+         <!-- Itens -->
+         <div class="single-hero-item set-bg" data-setbg="Assets/img/slider/bg-1.png">
+            <div class="container">
+               <div class="row">
+                  <div class="col-lg-12">
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- Itens -->
+
+         <!-- Itens -->
+         <div class="single-hero-item set-bg" data-setbg="Assets/img/slider/bg-2.jpg">
+            <div class="container">
+               <div class="row">
+                  <div class="col-lg-12">
+                     <span>Novembro 10 - 12 </span>
+                     <h1>Participe<br/>Simposio<br/>2019</h1>
+                     <h2 class="f-bold">Campinas, SP</h2>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- Itens -->
+
+      </div>
+   </div>
+   <!-- Slider Area End -->
+
+   <!-- Event Counter Begin -->
+   <section class="event-counter">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-6">
+               <div class="event-name">
+                  <h2>Proximo Evento</h2>
+                  <h4>10 de novembro, 2019 <span>Começando as 9:00</span></h4>
+               </div>
+            </div>
+
+            <!-- Retorna dias, horas, minutos e segundos de countdown.jquery.js -->
+            <div id="clockdiv">
+               <div>
+                   <span class="days"></span>
+                   <div class="smalltext">Dias</div>
+               </div>
+               <div>
+                   <span class="hours"></span>
+                   <div class="smalltext">Horas</div>
+               </div>
+               <div>
+                   <span class="minutes"></span>
+                   <div class="smalltext">Minutos</div>
+               </div>
+               <div>
+                   <span class="seconds"></span>
+                   <div class="smalltext">Segundos</div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- Event Counter End -->
+
+   <!-- Speaker Section Begin -->
+   <section class="speaker-section spad">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-12">
+               <div class="section-title">
+                  <h2>Principais Autores</h2>
+               </div>
+            </div>
+         </div>
+         <div class="row">
+            <!-- Itens -->
+            <div class="col-lg-4 col-sm-6">
+               <div class="speakers-about">
+                  <div class="speaker-img">
+                     <img src="Assets/img/autor1.jpg" alt="" class="responsive">
+                  </div>
+                  <div class="speaker-text">
+                     <h3>Albert Eistein <span>Físico teórico</span></h3>
+                  </div>
+               </div>
+            </div>
+            <!-- Itens -->
+            <div class="col-lg-4 col-sm-6">
+               <div class="speakers-about">
+                  <div class="speaker-img">
+                     <img src="Assets/img/autor2.jpg" alt="" class="responsive">
+                  </div>
+                  <div class="speaker-text">
+                     <h3>Stephen Hawking <span>Físico teórico</span></h3>
+                  </div>
+               </div>
+            </div>
+            <!-- Itens -->
+            <div class="col-lg-4 col-sm-6">
+               <div class="speakers-about">
+                  <div class="speaker-img">
+                     <img src="Assets/img/autor3.jpg" alt="" class="responsive">
+                  </div>
+                  <div class="speaker-text">
+                     <h3>Marie Curie <span>Cientista</span></h3>
+                  </div>
+               </div>
+            </div>
+            <!-- Itens -->
+         </div>
+
+         <!-- Botão -->
+         <div class="row">
+            <div class="col-lg-12 t-center">
+               <a href="#" class="primary-btn speaker-btn">Autores</a>
+            </div>
+         </div>
+         <!-- Botão -->
+
+      </div>
+   </section>
+   <!-- Speaker Section End -->
+
+   <!-- Workshop Begin -->
+   <section class="workshop-section">
+      <div class="workshop-img set-bg" data-setbg="Assets/img/alimento.jpg"></div>
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-6 offset-lg-6">
+               <div class="workshop-text">
+                  <!-- Texto para introduzir o leitor a algum topico relacionado -->
+                  <h2>O Futuro do <br/>Alimento.</h2>
+                  <p>A sequência de edições do Simpósio Latino Americano de Ciência de Alimentos, desde 1995, nos dá o privilégio, a nós pesquisadores, de contar com um observatório de desenvolvimento da área de Alimentos, com impacto na indústria de Alimentos, com a importância social e econômica da área de Alimentos, com abrangência nacional e internacional.
+
+                  Como podemos observar, a inovação nos setores de alimentos e agricultura pode incluir novos processos tecnológicos, embalagem, novos aditivos em alimentos, etc. Novas soluções estão sendo demandadas, seja para reduzir ou prevenir mudanças causadas por microrganismos, oxidação dos componentes dos alimentos e reações enzimáticas e não enzimáticas.</p>
+                  <a href="#" class="more-info primary-btn">Ler mais</a>
+                  <!-- -->
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- Workshop End -->
+
+   <!-- Speak About Section Begin -->
+   <section class="speak-about spad">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-12">
+               <div class="section-title">
+                  <h2>Vamos falar sobre</h2>
+               </div>
+            </div>
+         </div>
+         <!-- Folhetos para exibir temas abordados no simposio -->
+         <div class="row">
+            <!-- Itens -->
+            <div class="col-lg-4 col-md-6">
+               <div class="speak-text">
+                  <h2>Biotransformação<br/>como fonte<br/>de novos<br/>ingredientes.</h2>
+                  <div class="speaker-name">
+                     <h4>Marie Curie <span>Cientista</span></h4>
+                  </div>
+               </div>
+            </div>
+            <!-- Itens -->
+            <div class="col-lg-4 col-md-6">
+               <div class="speak-text">
+                  <h2>Alimentos,<br/>Envelhecimento<br/>e Doença Degenerativas.
+                  </h2>
+                  <div class="speaker-name">
+                     <h4>Stephen Hawking <span>Físico teórico</span></h4>
+                  </div>
+               </div>
+            </div>
+            <!-- Itens -->
+            <div class="col-lg-4 col-md-6">
+               <div class="speak-text">
+                  <h2>Técnica Avançada<br/>em Análise de Alimentos.</h2>
+                  <div class="speaker-name">
+                     <h4>Albert Eistein<span>Físico teórico</span></h4>
+                  </div>
+               </div>
+            </div>
+            <!-- Itens -->
+            <div class="col-lg-4 col-md-6">
+               <div class="speak-text">
+                  <h2>Avanço<br/>em Ciência Sensorial<br/>e Estudos do Consumidor.</h2>
+                  <div class="speaker-name">
+                     <h4>Stephen Hawking <span>Físico teórico</span></h4>
+                  </div>
+               </div>
+            </div>
+            <!-- Itens -->
+            <div class="col-lg-4 col-md-6">
+               <div class="speak-text">
+                  <h2>Tecnologia<br/>Emergente<br/>e Novos Produtos.</h2>
+                  <div class="speaker-name">
+                     <h4>Marie Curie <span>Cientista</span></h4>
+                  </div>
+               </div>
+            </div>
+            <!-- Itens -->
+            <div class="col-lg-4 col-md-6">
+               <div class="speak-text">
+                  <h2>Microbiota Intestinal,<br/>pré e próbióticos.</h2>
+                  <div class="speaker-name">
+                     <h4>Albert Eistein <span>Físico teórico</span></h4>
+                  </div>
+               </div>
+            </div>
+            <!-- Itens -->            
+         </div>
+      </div>
+   </section>
+   <!-- Speak About Section End -->
+
+   <!-- Subscribe Form Begin -->
+   <section class="subscribe-form set-bg spad" data-setbg="Assets/img/subs-bg.jpg">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-9">
+               <div class="section-title">
+                  <h2>Nunca perda outra oportunidade</h2>
+               </div>
+               <p>O método é muito simples, mas o papel do Coordenador(a) em orientar o grupo é fundamental.
+               Oriente o grupo a acessar nosso site e efetuar a inscrição. Coordenador(a) da caravana também deve efetuar sua inscrição.</p>
+            </div>
+            <!-- Chamada de engajamento -->
+            <div class="col-lg-12">
+               <form action="#" class="subs-form" method="post">
+                  <input type="email" placeholder="Seu endereço de email">
+                  <button type="submit" class="submit-btn">Inscreva-se Já!</button>
+               </form>
+            </div>
+            <!-- Chamada de engajamento -->
+
+         </div>
+      </div>
+   </section>
+   <!-- Subscribe Form End -->
+
+   <!-- Footer Begin -->
+   <footer class="footer-section">
+      <div class="container">
+         <div class="row pb-70">
+            <div class="col-lg-3 col-md-6">
+               <div class="company-widget">
+                  <h4>Companhia</h4>
+                  <ul>
+                     <li><a href="https://chuva.net.br/junte-se-a-nos/">Carreiras</a></li>
+                     <li>Voluntarios</li>
+                  </ul>
+               </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+               <div class="event-widget">
+                  <h4>Nossos Eventos</h4>
+                  <ul>
+                     <li><a href="https://peteletricaufu.wordpress.com/2017/12/19/xv-ceel-mais-uma-edicao-de-sucesso/">XV CEEL</a></li>
+                     <li><a href="https://2014.geem.galoa.com.br/">GEEM</a></li>
+                     <li><a href="http://www.unirio.br/sian2017">III SIAN</a></li>
+                     <li><a href="https://plataforma9.com/congressos/ix-simposio-internacional-de-generos-textuais-discursivos-siget-2.htm">IX SIGET</a></li>
+                  </ul>
+               </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+               <div class="links-widget">
+                  <h4>Links Uteis</h4>
+                  <ul>
+                     <li><a href="https://www.instagram.com/slaca2019/">Siga @slaca2019</a></li>
+                     <li>Novidades</li>
+                     <li>Suporte</li>
+                     <li>Politica de acessibilidade</li>
+                  </ul>
+               </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+               <div class="contact-widget">
+                  <h4>Contato</h4>
+                  <ul>
+                     <li><img class="icones" src="Assets/img/icones/pin.png"> <span>Barão Geraldo, Campinas</span></li>
+                     <li><img class="icones" src="Assets/img/icones/cell.png" alt=""> <span>(12)997263748</span></li>
+                     <li><img class="icones" src="Assets/img/icones/carta.png" alt=""> <span>chuva@chuvainc.com</span></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="copyright-area">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-12">
+               <div class="copyright-text">
+                  <div class="copyright">
+                     Copyright &copy;
+                           <!-- Ajusta para o ano atual --><script>document.write(new Date().getFullYear());</script> Todos os direitos reservados | Chuva Inc.
+                     <div class="footer-social">
+                         <!-- Mais engajamento atraves das redes sociais -->
+                        <a href="https://www.facebook.com/12SLACA/"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                         <!-- Mais engajamento atraves das redes sociais -->
+                     </div>
+                     <div class="term"><a href="Assets/html/termos.html">Termos e condições</a></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </footer>
+   <!-- Footer End -->
+
+   <!-- Js Plugins -->
+   <script src="Assets/js/jquery-3.3.1.min.js"></script>
+   <script src="Assets/js/bootstrap.min.js"></script>
+   <script src="Assets/js/jquery.slicknav.js"></script>
+   <script src="Assets/js/owl.carousel.min.js"></script>
+   <script src="Assets/js/circle-progress.min.js"></script>
+   <script src="Assets/js/countdown.jquery.js"></script>
+   <script src="Assets/js/main.js"></script>
+
+</body>
+</html>
