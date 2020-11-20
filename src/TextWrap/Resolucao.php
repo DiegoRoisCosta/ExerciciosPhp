@@ -1,77 +1,48 @@
-<!DOCTYPE html>
-<html lang="zxx">
-<head>
-     <link rel="stylesheet" href="css/style.css" type="text/css"/>
-</head>
-<body>
-   <div class="quebra-box">
-    <?php
-      
-      /**
-       * Verifica se esta vazio as entradas feitas pelo metodo POST do formulario e armazena.
-       */
-      if (!empty($_POST["texto"] && $_POST["comprimento"]))
-      {
+<?php
 
-          $text = $_POST['texto'];
-          $length = $_POST['comprimento'];
+namespace ExerciciosPhp\TextWrap;
 
-      }
-      else
-      {
+/**
+ * Implemente sua resolução nessa classe.
+ *
+ * Depois disso:
+ * - Crie um PR no github com seu código
+ * - Veja o resultado da correção automática do seu código
+ * - Commit até os testes passarem
+ * - Passou tudo, melhore a cobertura dos testes
+ * - Ficou satisfeito, envie seu exercício para a gente! <3
+ *
+ * Boa sorte :D
+ */
+ 
 
-          echo "preencha os campos";
 
-      }
-
-    /**
-     * Instancia Resolucao como novo objeto.
-     */
-    $resolucao = new Resolucao($text, $length);
-
-    $textResult = $resolucao->divisaoStr();
-
-    print ($textResult);
-
-    class Resolucao
+    class Resolucao implements TextWrapInterface
     {
         /**
          * Declarando variaveis.
          */
-        public $text;
-        public $length;
+
         public $wholeText;
         public $charTotal;
         public $textResult;
+        public $textTotal;
 
-         /**
-         * O método construtor definindo os valores iniciais dos atributos do objeto.
-         */
-        public function __construct(string $text, int $length)
-        {
 
-            $this->text = $text;
-            $this->length = $length;
-
-        }
         /**
          * Funcao criada para realizar o processamento do texto.
          */
-        public function divisaoStr()
+        public function textWrap(string $text, int $length): array
         {
-             /**
-              * Exibe o limite estipulado pelo usuario de caracateres dentro de uma linha.
-              */
-            print ("Limite por linha: " . $this->length . " caracteres<br><br>");
-
             /**
              * Divide o texto em elementos formados por palavras estipuladas pelo delimitador na variavel WholeText.
              */
-            $this->wholeText = explode(" ", $this->text);
+            $this->wholeText = explode(" ", $text);
 
             /**
              * Usa um contador para alcançar o numero de palavras.
              */
+            
             for ($i = 0;$i < count($this->wholeText);$i++)
             {
                 /**
@@ -83,44 +54,62 @@
                  * para saber o limite necessario para quebra de linha é somado os caracteres de cada palavra e inserido * em charTotal.
                  */
                 $this->charTotal = $this->charTotal + strlen($palavra);
-
                 /**
                  * Compara charTotal com o limite estipulado e retorna quebra de linha somente quando o valor for maior,
                  * exibindo o respectivo texto.
                  */
-                if ($this->charTotal + 1 <= $this->length)
+
+                if ($this->charTotal + 1 <= $length)
                 {
 
-                    if ($i == 0)
+                    if ($i == 0 )
                     {
-
-                        $this->textResult = $this->textResult . $palavra;
+                        $this->textResult = $this->textResult . $palavra; 
 
                     }
-                    else
-                    {
+
+
+                    elseif ($i > 0) {
 
                         $this->textResult = $this->textResult . " " . $palavra;
 
                     }
 
-                }
-                elseif ($this->charTotal + 1 > $this->length)
-                {
+                    elseif ($i > 0 && $this->charTotal == strlen($palavra + 1)) {
 
+                        $this->textResult = $this->textResult . $palavra;
+
+                    }
+                     
+
+                }
+
+                elseif ($this->charTotal + 1 > $length)
+                {      
+      
+                    
+                    $this->textTotal[] = $this->textResult;
+                    $this->textResult = str_replace($this->textResult, "", $this->textResult);
                     $this->charTotal = 0;
+                    if ($i > 0)
+                    {
+                        $this->textResult = $this->textResult . $palavra; 
+                        $this->textTotal[] = $this->textResult;
+                        $this->textResult = str_replace($this->textResult, "", $this->textResult);
+                        $this->charTotal = 0;
 
-                    $this->textResult = $this->textResult . "<br>" . $palavra . " ";
+                    }
                 }
+
 
             }
+            for ($c = 0;$c < count($this->wholeText);$c++)
+            {
+                return $this->textTotal;
 
-            return $this->textResult;
+            }
         }
+
 
     }
     ?>
-        <br><br>
-        <a href="index.php">Voltar</a>
-    </div>
-</body>

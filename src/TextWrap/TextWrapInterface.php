@@ -1,6 +1,6 @@
 <?php
 
-namespace Galoa\ExerciciosPhp\TextWrap;
+namespace ExerciciosPhp\TextWrap;
 
 /**
  * Define uma interface para o exercício de quebra de linha.
